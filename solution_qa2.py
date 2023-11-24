@@ -34,9 +34,8 @@ def queensAttack(n, k, r_q, c_q, obstacles):
             #kezdő pozíció
             pos = tuple([r_q + items[0],c_q + items[1]])
             while pos not in o_unique and 1 <= pos[0] <= n and 1 <= pos[1] <= n:
-                #lépés utáni pozíció amíg nem ér a pálya végére vagy ütközik obstacle-be
+                #lépés utáni pozíció amíg nem ér a tábla végére vagy ütközik obstacle-be
                 pos = tuple(map(sum,zip(pos,items)))
-                print(pos)
                 #minden lépés 1-el több opció
                 count+=1
         return count
