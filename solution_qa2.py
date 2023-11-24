@@ -32,7 +32,7 @@ def queensAttack(n, k, r_q, c_q, obstacles):
         count = 0
         for items in directions:
             #kezdő pozíció
-            pos = tuple([r_q + items[0],c_q + items[1]])
+            pos = tuple(map(sum,zip((r_q,c_q),items)))
             while pos not in o_unique and 1 <= pos[0] <= n and 1 <= pos[1] <= n:
                 #lépés utáni pozíció amíg nem ér a tábla végére vagy ütközik obstacle-be
                 pos = tuple(map(sum,zip(pos,items)))
