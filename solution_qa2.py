@@ -26,7 +26,7 @@ def queensAttack(n, k, r_q, c_q, obstacles):
         directions = set(product([-1, 0, 1], repeat=2)) - {(0, 0)}
         '''
         meg kell számolni, hogy hány lépést tud menni 
-        (abszolút pozíció + relatív pozíció), úgy hogy nem ütközik 
+        (abszolút pozíció + relatív irány), úgy hogy nem ütközik 
         obstacle-be vagy nem ér el a tábla végéig
         '''
         count = 0
